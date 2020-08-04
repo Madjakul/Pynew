@@ -87,4 +87,4 @@ Thanks to the following people who have contributed to this project:
 If you want to contact me you can reach me at [@Madjakul](https://twitter.com/madjakul).
 
 ## License
-This project uses the following license: [MIT](https://github.com/Madjakul/Pynew/master/LICENSE)
+This project uses the following license: [MIT](https://github.com/Madjakul/Pynew/blob/master/LICENSE)
