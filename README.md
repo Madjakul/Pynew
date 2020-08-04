@@ -20,11 +20,13 @@ If you want to use latest version, install from source. To install pynew from so
 find "$(cd ..; pwd)" -name "filename"
 ```
 You will see the absolute Path that leads to the pynew.sh script.
+
 * Copy the path to your clipboard and run
 ```bash
 PATH=$PATH:/path/to/pynew.sh
 ```
 it will allow you to run the script from anywhere on your PC.
+
 * Finally, you need to change the permissions of the script otherwise it wont work. From the folder where the script is intalled, run
 ```bash
 sudo chmod 774 pynew.sh
