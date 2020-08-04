@@ -1,5 +1,6 @@
 # Pynew
 ![GitHub](https://img.shields.io/github/license/Madjakul/Pynew) ![GitHub contributors](https://img.shields.io/github/contributors/Madjakul/Pynew) ![code size](https://img.shields.io/github/languages/code-size/Madjakul/Pynew)
+
 A bash script which creates a skeleton for your Python projects. Easy to use and ideal for students (assignments) and small projects.
 
 ## Prerequisites
