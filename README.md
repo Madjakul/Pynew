@@ -1,7 +1,9 @@
 # Pynew
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub contributors](https://img.shields.io/github/contributors/Madjakul/Pynew) ![code size](https://img.shields.io/github/languages/code-size/Madjakul/Pynew)
 
 A bash script which creates a skeleton for your Python projects. Easy to use and ideal for students (assignments) and small projects.
+
 
 ## Prerequisites
 
@@ -11,6 +13,7 @@ Before you begin, ensure you have met the following requirements:
 * A computer running under Linux or MacOS
 * [Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
 * [pip](https://pip.pypa.io/en/stable/installing/)
+
 
 ## Installing pynew
 
@@ -45,6 +48,7 @@ it will allow you to run the script from anywhere on your PC.
 ```bash
 sudo chmod 774 pynew.sh
 ```
+
 
 ## Using pynew
 
@@ -92,18 +96,24 @@ docker-clean:
 ```
 Change the '###' with the name of your app and you are ready to run !
 
+
 ## Contributors
 
 Thanks to the following people who have contributed to this project:
 @Madjakul (author)
 
+
 ## Credits
+
 This script creates a simplified skeleton, highly inspired from these articles :
 * [Ultimate Setup for Your Next Python Project](https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c)
 * [Automating Every Aspect of Your Python Project](https://towardsdatascience.com/automating-every-aspect-of-your-python-project-6517336af9da)
 
+
 ## Contact
+
 If you want to contact me you can reach me at [@Madjakul](https://twitter.com/madjakul).
 
 ## License
+
 This project uses the following license: [MIT](https://github.com/Madjakul/Pynew/blob/master/LICENSE)
