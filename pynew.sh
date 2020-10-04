@@ -250,8 +250,7 @@ If you want to contact me you can reach me at
 ## License
 This project uses the following license:" > README.md
 
-echo "flake8 >= 3.8.3
-bandit >= 1.6.2
+echo "bandit >= 1.6.2
 pytest-cov >= 2.10.0
 coverage >= 5.2" > requirements.txt
 
@@ -362,13 +361,6 @@ int-import-graph=
 
 overgeneral-exceptions=Exception
 
-[flake8]
-exclude =
-    .git,
-    __pycache__,
-    .pytest_cache,
-    venv
-
 ignore = F401,
          E712
     # Put Error/Style codes here e.g. H301
@@ -377,7 +369,7 @@ max-complexity = 10
 max-line-length = 120
 
 [bandit]
-targets: nlptrump
+targets: $varname
 
 [coverage:run]
 branch = True
@@ -393,3 +385,36 @@ exclude_lines =
 
 [coverage:html]
 directory = reports" > setup.cfg
+
+echo "MODULE := $varname
+
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+install-requirements:
+	pip3 install -r requirements.txt
+
+run:
+	@python3 -m $(MODULE)
+
+test:
+	@pytest
+
+lint:
+	@echo \"\n\${BLUE}Running Pylint against source and test files...\${NC}\n\"
+	@pylint --rcfile=setup.cfg **/*.py
+	@echo \"\n\${BLUE}Running Bandit against source files...\${NC}\n\"
+	@bandit -r --ini setup.cfg
+
+build:
+	@docker build -t $varname:latest .
+	@echo \"\n\${BLUE}Running the app...\${NC}\n\"
+	@docker run -t $varname ls -l
+
+clean:
+	rm -rf .pytest_cache .coverage .pytest_cache coverage.xml
+
+.PHONY: clean test
+
+docker-clean:
+	@docker system prune -f --filter \"label=name=$(MODULE)\"" > Makefile

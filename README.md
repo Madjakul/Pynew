@@ -57,51 +57,6 @@ From the folder where you want your project's skeleton to be stored, simply run
 bash pynew.sh
 ```
 
-For some syntaxe matters, I could'nt fill the Makefile with some default features. Copy this to your Makefile
-```mk
-MODULE := ###
-
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
-
-install-requirements:
-    pip3 install -r requirements.txt
-
-run:
-    @python3 -m $(MODULE)
-
-test:
-    @pytest
-
-lint:
-    @echo "\n${BLUE}Running Pylint against source and test files...${NC}\n"
-    @pylint --rcfile=setup.cfg **/*.py
-    @echo "\n${BLUE}Running Flake8 against source and test files...${NC}\n"
-    @flake8
-    @echo "\n${BLUE}Running Bandit against source files...${NC}\n"
-    @bandit -r --ini setup.cfg
-
-build:
-    @docker build -t ###:latest .
-    @echo "\n${BLUE}Running the app...${NC}\n"
-    @docker run -t ### ls -l
-
-clean:
-    rm -rf .pytest_cache .coverage .pytest_cache coverage.xml
-
-.PHONY: clean test
-
-docker-clean:
-    @docker system prune -f --filter "label=name=$(MODULE)"
-```
-Change the '###' with the name of your app and you are ready to run !
-
-
-## Contributors
-
-Thanks to the following people who have contributed to this project:
-@Madjakul (author)
-
 
 ## Credits
 
