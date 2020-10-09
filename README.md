@@ -17,16 +17,16 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installing pynew
 
-* Create a ```bin``` folder in your home directory
+* Create a ```bin``` folder in your home directory:
 ```bash
 mkdir ~/bin
 ```
 
-* Add this directory to your path
+* Add this directory to your path:
 ```bash
 nano ~/.bashrc
 ```
-At the very end of the text edito, add this line
+At the very end of the text editor, add this line:
 ```bash
 export PATH="$HOME/bin:$PATH"
 ```
