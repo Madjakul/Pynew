@@ -199,7 +199,7 @@ config.env
 
 touch configure_project.sh
 
-echo "FROM python:3.6
+echo "FROM python:3.8
 
 WORKDIR /
 
@@ -232,7 +232,7 @@ echo "# $repovar
 Before you begin, ensure you have met the following requirements:
 
 * Internet Connection
-* Python 3.6+
+* Python 3.8+
 
 ## Installing $varname
 
@@ -250,7 +250,8 @@ If you want to contact me you can reach me at
 ## License
 This project uses the following license:" > README.md
 
-echo "bandit >= 1.6.2
+echo "pylint >= 2.6.0
+bandit >= 1.6.2
 pytest-cov >= 2.10.0
 coverage >= 5.2" > requirements.txt
 
