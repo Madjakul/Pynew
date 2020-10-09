@@ -18,9 +18,9 @@ Before you begin, ensure you have met the following requirements:
 ## Installing pynew
 
 * Create a ```bin``` folder in your home directory
-  ```bash
-  mkdir ~/bin
-  ```
+```bash
+mkdir ~/bin
+```
 
 * Add this directory to your path
 ```bash
@@ -50,7 +50,6 @@ chmod u+x pynew.sh
 mv pynew.sh ~/bin
 ```
 In order to move the pynew bash script to the bin directory you have just created.
-```
 
 
 ## Using pynew
