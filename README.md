@@ -17,36 +17,39 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installing pynew
 
-If you want to use latest version, install from source. To install pynew from source, follow these steps:
+* Create a ```bin``` folder in your home directory
+  ```bash
+  mkdir ~/bin
+  ```
 
-* From the local folder where you want it to be installed, copy the link under the "clone" button
+* Add this directory to your path
+```bash
+nano ~/.bashrc
+```
+At the very end of the text edito, add this line
+```bash
+export PATH="$HOME/bin:$PATH"
+```
+Press <kbd>Ctrl</kbd> + <kbd>X</kbd> then <kbd>Y</kbd> and finally hit <kbd>Enter</kbd> in order to save the file.
+
+* Load the new ```$PATH``` into the current shell session using the ```source``` command:
+```bash
+source ~/.bashrc
+```
+it will allow you to run the script from anywhere on your PC.
+
+* You can now clone this directory wherever you want. From the local folder where you want it to be installed, copy the link under the "clone" button
 
 * Once it's cloned, open your terminal from the installation folder and run
 ```bash
-pip3 install -r requirements.txt
+chmod u+x pynew.sh
 ```
 
 * You can now run 
 ```bash
-find "$(cd ..; pwd)" -name "filename"
+mv pynew.sh ~/bin
 ```
-You will see the absolute Path that leads to the pynew.sh script.
-
-* Copy the path to your clipboard and run
-```bash
-cd ~
-nano .bashrc
-```
-This would open the bash editor with the nano text editor, go to the end of the file and add this
-```bash
-PATH=$PATH:/path/to/pynew.sh
-```
-Press <kbd>Ctrl</kbd> + <kbd>X</kbd> then <kbd>Y</kbd> and finally hit <kbd>Enter</kbd> ,
-it will allow you to run the script from anywhere on your PC.
-
-* Finally, you need to change the permissions of the script otherwise it wont work. From the folder where the script is intalled, run
-```bash
-sudo chmod 774 pynew.sh
+In order to move the pynew bash script to the bin directory you have just created.
 ```
 
 
@@ -54,7 +57,7 @@ sudo chmod 774 pynew.sh
 
 From the folder where you want your project's skeleton to be stored, simply run
 ```bash
-bash pynew.sh
+pynew.sh
 ```
 
 

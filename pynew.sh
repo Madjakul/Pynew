@@ -395,7 +395,7 @@ install-requirements:
 	pip3 install -r requirements.txt
 
 run:
-	@python3 -m $(MODULE)
+	@python3 -m \$(MODULE)
 
 test:
 	@pytest
@@ -417,4 +417,4 @@ clean:
 .PHONY: clean test
 
 docker-clean:
-	@docker system prune -f --filter \"label=name=$(MODULE)\"" > Makefile
+	@docker system prune -f --filter \"label=name=\$(MODULE)\"" > Makefile
