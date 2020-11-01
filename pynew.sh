@@ -26,7 +26,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/setup-python@v1
       with:
-        python-version: '3.6'
+        python-version: '3.8'
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
@@ -36,7 +36,6 @@ jobs:
     - name: Install Linters
       run: |
         pip install pylint
-        pip install flake8
         pip install bandit
     - name: Run Linters
       run: make lint" > .github/workflows/build-test.yml
@@ -255,7 +254,7 @@ bandit >= 1.6.2
 pytest-cov >= 2.10.0
 coverage >= 5.2" > requirements.txt
 
-echo " [pylint]
+echo "[pylint]
 persistent=yes
 load-plugins=
 jobs=1
@@ -367,7 +366,6 @@ ignore = F401,
     # Put Error/Style codes here e.g. H301
 
 max-complexity = 10
-max-line-length = 120
 
 [bandit]
 targets: $varname
@@ -408,9 +406,9 @@ lint:
 	@bandit -r --ini setup.cfg
 
 build:
-	@docker build -t $varname:latest .
+	@docker build -t \$(MODULE):latest .
 	@echo \"\n\${BLUE}Running the app...\${NC}\n\"
-	@docker run -t $varname ls -l
+	@docker run -t \$(MODULE) ls -l
 
 clean:
 	rm -rf .pytest_cache .coverage .pytest_cache coverage.xml
