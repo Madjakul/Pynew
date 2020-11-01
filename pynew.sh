@@ -208,7 +208,7 @@ RUN pip3 install -r requirements.txt
 
 COPY . /
 
-ENTRYPOINT ['python3', '-m', '$varname']
+ENTRYPOINT ['python', '-m', '$varname']
 
 CMD ['-u', '$varname']" > Dockerfile
 
@@ -406,9 +406,9 @@ lint:
 	@bandit -r --ini setup.cfg
 
 build:
-	@docker build -t \$(MODULE):latest .
+	@docker build -t \${MODULE}:latest .
 	@echo \"\n\${BLUE}Running the app...\${NC}\n\"
-	@docker run -t \$(MODULE) ls -l
+	@docker run -t \${MODULE} ls -l
 
 clean:
 	rm -rf .pytest_cache .coverage .pytest_cache coverage.xml
