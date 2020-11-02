@@ -198,7 +198,7 @@ config.env
 
 touch configure_project.sh
 
-echo "FROM python:3.8
+echo "FROM python:3.8-slim
 
 WORKDIR /
 
@@ -206,11 +206,7 @@ COPY ./requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
-COPY . /
-
-ENTRYPOINT ['python', '-m', '$varname']
-
-CMD ['-u', '$varname']" > Dockerfile
+CMD [\"python3\", \"-m\" \"$varname\"]" > Dockerfile
 
 touch Makefile
 
