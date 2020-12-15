@@ -39,7 +39,7 @@ jobs:
         pip install bandit
     - name: Run Linters
       run: make lint" > .github/workflows/build-test.yml
-echo "if __name__ == '__main__':
+echo "if __name__ == \"__main__\":
     pass" > $varname/__main__.py
 
 touch $varname/__init__.py
@@ -231,7 +231,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installing $varname
 
-If you want to use latest version, install from source. To install twitter-scraper from source, follow these steps:
+If you want to use latest version, install from source. To install $varname from source, follow these steps:
 
 ## Using $varname
 
