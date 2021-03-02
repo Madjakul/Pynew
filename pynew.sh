@@ -39,7 +39,9 @@ jobs:
         pip install bandit
     - name: Run Linters
       run: make lint" > .github/workflows/build-test.yml
-echo "if __name__ == \"__main__\":
+echo "# __main__.py
+
+if __name__ == \"__main__\":
     pass" > $varname/__main__.py
 
 touch $varname/__init__.py
@@ -50,14 +52,15 @@ echo "# conftest.py
 import logging
 import pytest
 
-LOGGER = logging.getLogger(__name__)
 
+LOGGER = logging.getLogger(__name__)
 
 @pytest.fixture(scope='function')
 def example_fixture():
     LOGGER.info('Setting Up Example Fixture...')
     yield
     LOGGER.info('Tearing Down Example Fixture...')
+
 " > tests/conftest.py
 
 echo "# context.py
@@ -66,10 +69,12 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import $varname  # noqa # pylint: disable=unused-import, wrong-import-position
+
 " > tests/context.py
 
 echo "def test_app():
     pass
+
 " > tests/test_$varname.py
 
 echo "# Windows thumbnail cache files
@@ -226,7 +231,6 @@ echo "# $repovar
 
 Before you begin, ensure you have met the following requirements:
 
-* Internet Connection
 * Python 3.8+
 
 ## Installing $varname
