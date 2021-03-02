@@ -59,20 +59,17 @@ LOGGER = logging.getLogger(__name__)
 def example_fixture():
     LOGGER.info('Setting Up Example Fixture...')
     yield
-    LOGGER.info('Tearing Down Example Fixture...')
-" > tests/conftest.py
+    LOGGER.info('Tearing Down Example Fixture...')" > tests/conftest.py
 
 echo "# context.py
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import $varname  # noqa # pylint: disable=unused-import, wrong-import-position
-" > tests/context.py
+import $varname  # noqa # pylint: disable=unused-import, wrong-import-position" > tests/context.py
 
 echo "def test_app():
-    pass
-" > tests/test_$varname.py
+    pass" > tests/test_$varname.py
 
 echo "# Windows thumbnail cache files
 Thumbs.db
