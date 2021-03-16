@@ -84,7 +84,7 @@ ehthumbs_vista.db
 [Dd]esktop.ini
 
 # Recycle Bin used on file shares
-$RECYCLE.BIN/
+\$RECYCLE.BIN/
 
 # Windows Installer files
 *.cab
@@ -138,7 +138,7 @@ pip-selfcheck.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*$py.class
+*\$py.class
 
 # Distribution / packaging
 .Python
@@ -280,12 +280,12 @@ ignore-docstrings=yes
 ignore-imports=no
 
 init-import=no
-dummy-variables-rgx=_$|dummy
+dummy-variables-rgx=_\$|dummy
 additional-builtins=
 callbacks=cb_,_cb
 
 max-line-length=160
-ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+ignore-long-lines=^\s*(# )?<?https?://\S+>?\$
 single-line-if-stmt=no
 no-space-check=trailing-comma,dict-separator
 max-module-lines=2000
@@ -297,26 +297,26 @@ good-names=i,j,k,ex,Run,_
 bad-names=foo,bar,baz,toto,tutu,tata
 name-group=
 include-naming-hint=no
-function-rgx=[a-z_][a-z0-9_]{2,30}$
-function-name-hint=[a-z_][a-z0-9_]{2,30}$
-variable-rgx=[a-z_][a-z0-9_]{2,30}$
-variable-name-hint=[a-z_][a-z0-9_]{2,30}$
-const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$
-const-name-hint=(([A-Z_][A-Z0-9_]*)|(__.*__))$
-attr-rgx=[a-z_][a-z0-9_]{2,}$
-attr-name-hint=[a-z_][a-z0-9_]{2,}$
-argument-rgx=[a-z_][a-z0-9_]{2,30}$
-argument-name-hint=[a-z_][a-z0-9_]{2,30}$
-class-attribute-rgx=([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))$
-class-attribute-name-hint=([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))$
-inlinevar-rgx=[A-Za-z_][A-Za-z0-9_]*$
-inlinevar-name-hint=[A-Za-z_][A-Za-z0-9_]*$
-class-rgx=[A-Z_][a-zA-Z0-9]+$
-class-name-hint=[A-Z_][a-zA-Z0-9]+$
-module-rgx=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$
-module-name-hint=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$
-method-rgx=[a-z_][a-z0-9_]{2,}$
-method-name-hint=[a-z_][a-z0-9_]{2,}$
+function-rgx=[a-z_][a-z0-9_]{2,30}\$
+function-name-hint=[a-z_][a-z0-9_]{2,30}\$
+variable-rgx=[a-z_][a-z0-9_]{2,30}\$
+variable-name-hint=[a-z_][a-z0-9_]{2,30}\$
+const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))\$
+const-name-hint=(([A-Z_][A-Z0-9_]*)|(__.*__))\$
+attr-rgx=[a-z_][a-z0-9_]{2,}\$
+attr-name-hint=[a-z_][a-z0-9_]{2,}\$
+argument-rgx=[a-z_][a-z0-9_]{2,30}\$
+argument-name-hint=[a-z_][a-z0-9_]{2,30}\$
+class-attribute-rgx=([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))\$
+class-attribute-name-hint=([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))\$
+inlinevar-rgx=[A-Za-z_][A-Za-z0-9_]*\$
+inlinevar-name-hint=[A-Za-z_][A-Za-z0-9_]*\$
+class-rgx=[A-Z_][a-zA-Z0-9]+\$
+class-name-hint=[A-Z_][a-zA-Z0-9]+\$
+module-rgx=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))\$
+module-name-hint=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))\$
+method-rgx=[a-z_][a-z0-9_]{2,}\$
+method-name-hint=[a-z_][a-z0-9_]{2,}\$
 no-docstring-rgx=__.*__
 docstring-min-length=-1
 property-classes=abc.abstractproperty
